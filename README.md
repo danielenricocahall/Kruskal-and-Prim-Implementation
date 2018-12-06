@@ -5,7 +5,7 @@ Implementation of Prim and Kruskal MST algorithms in C++. An adjacency matrix wa
 ![alt text](https://github.com/danielenricocahall/Kruskal-and-Prim-Implementation/blob/master/Results/Prim_Kruskal_Fit_1.png)
 ![alt text](https://github.com/danielenricocahall/Kruskal-and-Prim-Implementation/blob/master/Results/Prim_Kruskal_Fit_2.png)
  
-Each algorithm had a runtime which was best fit by O(|V|^3), which I believe was due to the use of an adjacency matrix. With an adjacancy list and priority queue, the runtime of both implementations would drastically improve. 
+Each algorithm had a runtime which was best fit by O(|V|^3), which I believe was due to the use of an adjacency matrix. With an adjacency list and priority queue, the runtime of both implementations would drastically improve. 
  
  ## Conclusions ##
  If you have any questions, feel free to email me at danielenricocahall@gmail.com.
