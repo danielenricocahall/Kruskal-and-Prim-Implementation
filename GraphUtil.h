@@ -12,9 +12,9 @@
 class GraphUtil
 {
 public:
-	static Graph generateRandomGraph(const unsigned int V,
-			const unsigned int range,
-			const double edgeProbability);
+	static Graph generateRandomGraph(unsigned int V,
+			unsigned int range,
+			double edgeProbability);
 
 	static bool allVerticesReached(const std::vector<bool>& visited);
 };

@@ -7,23 +7,17 @@
 
 #include "PrimSolver.h"
 #include "GraphUtil.h"
-#include <algorithm>
 #include <climits>
-#include <iostream>
-#include <queue>
+
 
 PrimSolver::PrimSolver()
-{
-
-}
+= default;
 
 
 
 
 PrimSolver::~PrimSolver()
-{
-
-}
+= default;
 
 MSTSolver::Edge PrimSolver::findMinimumAdjacentEdge(
 		const Graph& G,
@@ -33,7 +27,7 @@ MSTSolver::Edge PrimSolver::findMinimumAdjacentEdge(
 
 	const unsigned int V = G.size();
 	int min = INT_MAX;
-	Edge e;
+	Edge e{};
 	e.s = v;
 	for(unsigned int u = 0; u < V; ++u)
 	{
@@ -71,7 +65,7 @@ void PrimSolver::solveMinimumSpanningTree(const Graph& G)
 	// O(|V|) loop
 	while(N < V-1)
 	{
-		Edge e;
+		Edge e{};
 		e.w = INT_MAX;
 		// O(|V|)
 		for(const auto &v: S)

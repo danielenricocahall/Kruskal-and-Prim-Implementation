@@ -15,8 +15,8 @@ class PrimSolver : public MSTSolver
 public:
 	PrimSolver();
 	virtual ~PrimSolver();
-	virtual void solveMinimumSpanningTree(const Graph& G);
-	Edge findMinimumAdjacentEdge(const Graph& G, const int v, const std::vector<bool>& visited);
+	void solveMinimumSpanningTree(const Graph& G) override;
+	static Edge findMinimumAdjacentEdge(const Graph& G, int v, const std::vector<bool>& visited);
 };
 
 

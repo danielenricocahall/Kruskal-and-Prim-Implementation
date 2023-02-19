@@ -8,25 +8,20 @@
 #include "KruskalSolver.h"
 #include <algorithm>
 #include <climits>
-#include <iostream>
 
 KruskalSolver::KruskalSolver()
-{
-
-}
+= default;
 
 KruskalSolver::~KruskalSolver()
-{
+= default;
 
-}
-
-int KruskalSolver::find(const std::vector<int>& parent, int i)
+int KruskalSolver::find(const std::vector<unsigned int>& parent, unsigned int i)
 {
     while (parent[i] != i)
         i = parent[i];
     return i;
 }
-void KruskalSolver::union1(std::vector<int>& parent, int i, int j)
+void KruskalSolver::union1(std::vector<unsigned int>& parent, int i, int j)
 {
     int a = find(parent,i);
     int b = find(parent, j);
@@ -44,7 +39,7 @@ void KruskalSolver::solveMinimumSpanningTree(const Graph& G)
 	{
 		for(unsigned int jj = ii; jj < V; ++jj)
 		{
-			Edge e;
+			Edge e{};
 			e.s = ii;
 			e.d = jj;
 			e.w = G[ii][jj];
@@ -64,7 +59,7 @@ void KruskalSolver::solveMinimumSpanningTree(const Graph& G)
 	}
 
 	// set up a collection of parent vertices O(|V|)
-	std::vector<int> parent;
+	std::vector<unsigned int> parent;
 	parent.resize(V);
 	for(unsigned int ii = 0; ii < V; ++ii)
 	{

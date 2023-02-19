@@ -26,8 +26,8 @@
 
 int main()
 {
-	PrimSolver * ps = new PrimSolver();
-	KruskalSolver * ks = new KruskalSolver();
+	auto * ps = new PrimSolver();
+	auto * ks = new KruskalSolver();
 
 	const unsigned int R = 10;
 

@@ -8,10 +8,11 @@
 
 
 #include "GraphUtil.h"
-#include <stdlib.h>
+#include <cstdlib>
 #include <random>
 #include <climits>
-#include <iostream>
+#include <algorithm>
+
 Graph GraphUtil::generateRandomGraph(const unsigned int V,
 		const unsigned int range,
 		const double edgeProbability)
@@ -46,12 +47,5 @@ Graph GraphUtil::generateRandomGraph(const unsigned int V,
 }
 bool GraphUtil::allVerticesReached(const std::vector<bool>& visited)
 {
-	for(const auto &v: visited )
-	{
-		if(!v)
-		{
-			return false;
-		}
-	}
-	return true;
+    return std::all_of(visited.begin(), visited.end(), [](const bool v){ return v; });
 }
